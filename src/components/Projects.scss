@@ -1,0 +1,65 @@
+h1 {
+  text-align: center;
+}
+
+.projects {
+  list-style: none;
+  padding: 0 5vw;
+  background-color: rgb(190, 199, 190);
+  user-select: none;
+  li {
+    background-color: rgb(233, 242, 233);
+    display: flex;
+    flex-direction: row;
+    img {
+      width: 350px;
+      height: 250px;
+      background-color: rgb(206, 218, 206);
+      border-radius: 5px;
+      object-fit: contain;
+    }
+    div {
+      padding: 5px 5vw;
+      width: calc(100% - 350px - 5vw);
+      background-color: green;
+      h1 {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+  
+      .tech-stack{
+        list-style: none;
+        padding:0;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        width: auto;
+      }
+  
+      .link {
+        list-style: none;
+        padding: none;
+        display: flex;
+        align-items: center;
+        margin:0;
+        width: auto;
+        background-color: red;
+        li {
+          padding: 0;
+          margin:0;
+          display: flex;        
+          align-items: center;
+          justify-content: center;
+          background-color: green;
+          
+          a{
+            padding: 0;
+            margin: 0;
+            color:black;
+          }
+        }
+      }
+    }
+   
+  }
+}

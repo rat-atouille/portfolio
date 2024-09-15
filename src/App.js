@@ -20,7 +20,7 @@ function App() {
             {openMenu && (
               <ul className='menus'>
                 <li className='about' key='about'>
-                  <Link to='/aboutme'>About me</Link>
+                  <Link to='/aboutme'>About</Link>
                 </li>
                 <li className='projects' key='projects'>
                   <Link to='/projects'>Projects</Link>
