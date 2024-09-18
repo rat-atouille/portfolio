@@ -1,52 +1,26 @@
 import './App.css';
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import {  Route, Routes, Link } from 'react-router-dom';
-import ThreeScene from './components/ThreeScene';
+import {motion} from 'framer-motion'
 import Experience from './components/Experience';
-import Clover from './assets/bitmap-clover.png';
 import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import Main from './components/Main';
 
-function App() {
-  const [openMenu, setOpenMenu] = useState(false);
-
+const App = () => {
   return (
-      <div className="App">
-        <main className="App-header">
-          <div className='left'>
-            <img src={Clover} alt="Logo" />
-            <p>[ Nina P. ]</p>
-            {openMenu && (
-              <ul className='menus'>
-                <li className='about' key='about'>
-                  <Link to='/aboutme'>About</Link>
-                </li>
-                <li className='projects' key='projects'>
-                  <Link to='/projects'>Projects</Link>
-                </li>
-                <li className='contact' key='contact'>
-                  <Link to='/contact'>Contact</Link>
-                </li>
-              </ul>
-            )}
-          </div>
-          <div className='right' onClick={() => setOpenMenu(!openMenu)}>
-            {openMenu ? (
-              <>...</>
-            ) : (
-              <>-</>
-            )}
-          </div>
-        </main>
-        
+    <div className="App">
+      <div className='containers'>
         <Routes>
+          <Route path='/' element={<Main />} />
           <Route path='/aboutme' element={<About />} />
           <Route path='/projects' element={<Projects />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>
       </div>
+    </div>
   );
-}
+};
 
 export default App;
