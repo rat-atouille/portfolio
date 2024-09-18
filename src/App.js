@@ -9,6 +9,11 @@ import Contact from './components/Contact';
 import Main from './components/Main';
 
 const App = () => {
+
+  // loading
+  useEffect(()=> {
+
+  }, [])
   return (
     <div className="App">
       <div className='containers'>
