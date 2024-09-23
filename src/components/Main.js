@@ -41,7 +41,7 @@ const Main = () => {
 
   return (
     <section className="App-header">
-      <p className="mark">Hello</p>
+      <div className="hr"><hr /></div>
       <div className="left">
         <div className="background">
           <img src={Clover} alt="Logo" />
@@ -113,6 +113,7 @@ const Main = () => {
           )}
         </div>
       </div>
+      <div className="hr1"><hr /></div>
       <div className="footer"> Nina Pong {'\u00a9'} 2024. All rights reserved.</div>
     </section>
   );

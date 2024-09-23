@@ -20,6 +20,28 @@
   user-select: none;
   background-color: #F3F4EF;
 
+  .hr {
+    position: absolute;
+    top:1rem;
+    left: 0;
+    width: 95%;
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    color: #001EFF;
+    align-items: center;
+  }
+  .hr1 {
+    position: absolute;
+    bottom:2rem;
+    left: 0;
+    width: 95%;
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    color: #001EFF;
+    align-items: center;
+  }
   .mark {
     position: absolute;
     top:0rem;
@@ -27,6 +49,11 @@
     font-size: 0.8rem;
     font-weight: 500;
     color: #001EFF;
+    display: inline-block;
+    width: calc(100vw - 10% );
+    p {
+      width: 10%;
+    }
   }
   .left {
     display: flex;

@@ -14,6 +14,16 @@ const About = () => {
       </section>
       <section>
         <h1>Skills</h1>
+        <ul>
+          <li>ReactJS</li>
+          <li>JavaScript</li>
+          <li>SASS/CSS</li>
+          <li>Java</li>
+          <li>Python</li>
+          <li>C</li>
+          <li>C++</li>
+          <li>SQL</li>
+        </ul>
       </section>
     </div>
   )
