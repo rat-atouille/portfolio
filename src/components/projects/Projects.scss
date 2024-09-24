@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: row; 
+  width: 100vw;
+  height: 100vh;
+  background-color: #F3F4EF;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #F3F4EF;
+  border: 1px solid #001EFF;
+  cursor: pointer;
+  flex-basis: 25%; // Each section takes 1/4th of the width by default
+  transition: flex-basis 0.5s ease, background-color 0.5s ease; // Smooth transition for size and background
+
+  &:hover {
+    background-color: #e1e2da;
+  }
+
+  &.active {
+    flex-basis: 60%; // Expand the selected section to more than half
+    background-color: #eee; // Change background color for active section
+
+    .section-content {
+      display: block;
+      opacity: 1; // Smooth content fade-in
+      transition: opacity 0.5s ease;
+    }
+  }
+
+  .section-title {
+    font-size: 2em;
+    writing-mode: vertical-lr;
+    
+    text-orientation: mixed;
+  }
+
+  .section-content {
+    display: none;
+    opacity: 0;
+    margin-top: 10px;
+    font-size: 1.5em;
+  }
+}
+
+.section:not(.active) {
+  flex-basis: calc(40% / 3); // The remaining three sections share the remaining space equally
+  transition: flex-basis 0.5s ease; // Smooth size transition for closing
+}

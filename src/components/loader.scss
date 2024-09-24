@@ -1,0 +1,34 @@
+.loader {
+  display: flex;
+  gap: 7vh;
+  flex-direction: column;
+  color: #001eff;
+  width: 100vw;
+  height: 100vh;
+  font-size: 1.5em;
+  font-weight: 700;
+  z-index: 1000;
+  background-color: #f3f4ef;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.loader img {
+  width: 200px;
+  height: 300px;
+  object-fit: contain;
+  animation: rotateImage 5s linear infinite; /* Apply the rotation animation */
+}
+
+@keyframes rotateImage {
+  from {
+    transform: rotate(0deg); /* Start at 0 degrees */
+  }
+  to {
+    transform: rotate(360deg); /* Rotate full circle */
+  }
+}

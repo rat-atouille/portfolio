@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-
+import './loader.scss'
+import Time from '../assets/bitmap-hourglass.png'
 const Loader = () => {
-  const greeting = ["안녕, 만나서 반가워요.", "Nice To Meet You."];
   const [warning, setWarning] = useState(false);
 
   // display warning if the screen is smaller than tablet size
@@ -14,8 +14,9 @@ const Loader = () => {
   return (
     <>
       {warning && (
-        <div>
-          This Website is optimized for laptop/tablet screen.
+        <div className="loader">
+          <img src={Time}></img>
+          <p>This Website is optimized for laptop/tablet screen.</p>
         </div>
       )}
     </>

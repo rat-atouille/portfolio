@@ -20,28 +20,6 @@
   user-select: none;
   background-color: #F3F4EF;
 
-  .hr {
-    position: absolute;
-    top:1rem;
-    left: 0;
-    width: 95%;
-    margin: 0;
-    padding: 0;
-    border-width: 0;
-    color: #001EFF;
-    align-items: center;
-  }
-  .hr1 {
-    position: absolute;
-    bottom:2rem;
-    left: 0;
-    width: 95%;
-    margin: 0;
-    padding: 0;
-    border-width: 0;
-    color: #001EFF;
-    align-items: center;
-  }
   .mark {
     position: absolute;
     top:0rem;
@@ -93,7 +71,7 @@
         padding: 0;
         text-align: center;
         font-weight: 700;
-
+        transition: color 0.2s;
         &:hover {
           color: #b2b2eb; 
         }
@@ -139,7 +117,7 @@
       h3 {
         display: flex;
         font-weight: 800;
-        font-size: 1.6rem;
+        font-size: 1.7rem;
         text-transform: uppercase;
       }
     }
@@ -190,14 +168,10 @@
             color: #001EFF;
             text-decoration: none;
             font-weight: 700;
-
+            transition: color 0.2s ease;
             &:hover {
               color: #8e9aef;
             }
-          }
-
-          &:hover {
-            color: #8e9aef;
           }
         }
 
@@ -213,7 +187,7 @@
 
   .footer {
     position: absolute;
-    bottom: 1rem;
+    bottom: 0rem;
     left: 1rem;
     font-size: 0.8rem;
     font-weight: 500;
@@ -230,6 +204,18 @@
     flex-direction: column;
     text-align: right;
     gap: 1rem;
+    a {
+      text-decoration: none;
+      margin-top: 1rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #001EFF;
+      font-weight: 700;
+      transition: color 0.2s ease;
+      &:hover {
+        color: #8e9aef;
+      }
+    }
   }
   .all {
     padding: 0;
@@ -276,4 +262,21 @@
 
 .active-element {
   opacity: 1;
+}
+
+.hr, .hr1 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto; /* Horizontally center the hr */
+  width: 100%;
+  border: none;
+}
+
+.hr {
+  top: 1rem;
+}
+
+.hr1 {
+  bottom: 1rem; /* Adjust as needed for bottom positioning */
 }

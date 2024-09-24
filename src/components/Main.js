@@ -9,7 +9,11 @@ const Main = () => {
   const [contact, setContact] = useState(false);
   const [about, setAbout] = useState(false);
   const [credit, setCredit] = useState(false);
-  const projects = ['North America Word Chain', 'Western GPA Calculator', 'Movie Tracker', 'Portfolio Old.Ver', 'See All Projects'];
+  const projects = [
+    { id: 'wordchain', title: "Word Chain", link: 'https://github.com/rat-atouille/North-America-Word-Chain' },
+    { id: 'movie', title:"Movie Tracker", link: 'https://github.com/rat-atouille/movieTracker' },
+    { id: 'gpa', title: "GPA CALCULATOR", link: "https://uwo-gpa-calculator.netlify.app/" }
+  ];
 
   const handleViewProjToggle = () => {
     setViewProj((prev) => !prev);
@@ -81,33 +85,29 @@ const Main = () => {
             <p className="short-about element">
               Currently studying Computer Science at University of Western Ontario, I discovered my passion for software engineering during a group project and have been exploring various fields within the discipline ever since.
               I'm also a graphic design enthusiast, particularly drawn to Swiss design.
-              <Link to='/aboutme'>Learn more {'\u2192'}</Link>
+              {/*<Link to='/aboutme'>Learn more {'\u2192'}</Link>*/}
             </p>
           )}
           {viewProj && (
             <ul className="projects element">
               {projects.map((item, index) => (
-                index === projects.length - 1 ? (
-                  <li className="all" key={index}><Link to='/projects'>{item}  {'\u2192'}</Link></li>
-                ) : (
-                  <li key={index}>{item}</li>
-                )
+                <li key={index}>
+                  <a href={item.link} target="_blank">{item.title} {'\u2197'}</a>
+                </li>
               ))}
             </ul>
           )}
           {contact && (
             <ul className="contact element">
               <li><a href="mailto:ninapong777@gmail.com">Email {'\u2197'}</a></li>
-              <li><a href="https://www.linkedin.com/in/user/" target="_blank" rel="noopener noreferrer">LinkedIn {'\u2197'}</a></li>
-              <li><a href="https://github.com/user" target="_blank" rel="noopener noreferrer">Github {'\u2197'}</a></li>
+              <li><a href="https://www.linkedin.com/in/heenaninap/" target="_blank" rel="noopener noreferrer">LinkedIn {'\u2197'}</a></li>
+              <li><a href="https://github.com/rat-atouille" target="_blank" rel="noopener noreferrer">Github {'\u2197'}</a></li>
             </ul>
           )}
           {credit && (
             <ul className="credit element">
-              <li className="clover_credit" style={{ fontWeight: "800", fontSize: "1.3rem" }}>Clover
-                <li style={{ fontSize: "1rem", color: "#8e9aef" }}>
-                  Illustration by <a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA" target="_blank" style={{ textDecoration: "underline", color: "#8e9aef" }}>Icons 8</a> from <a href="https://icons8.com/illustrations" target="_blank" style={{ textDecoration: "underline", color: "#8e9aef" }}>Ouch!</a>
-                </li>
+              <li style={{ fontSize: "1rem", color: "#8e9aef" }}>
+                Illustration by <a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA" target="_blank" style={{ textDecoration: "underline" }}>Icons 8</a> from <a href="https://icons8.com/illustrations" target="_blank" style={{ textDecoration: "underline" }}>Ouch!</a>
               </li>
             </ul>
           )}
