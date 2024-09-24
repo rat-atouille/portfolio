@@ -4,7 +4,6 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Main from './components/Main';
 import About from './components/About';
 import Projects from './components/projects/Projects';
-import Details from './components/Details';
 import Loader from './components/Loading';
 
 const App = () => {
@@ -29,7 +28,6 @@ const App = () => {
             <Route path="/" element={<Main />} />
             <Route path="/aboutme" element={<About />} />
             <Route path="/projects" element={<Projects projectName={projectName} setProjectName={setProjectName} />}>
-              <Route path={`${projectName}`} element={<Details />} />
             </Route>
           </Routes>
         </div>
