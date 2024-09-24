@@ -15,7 +15,7 @@ const Loader = () => {
     <>
       {warning && (
         <div className="loader">
-          <img src={Time}></img>
+          <img src={Time} alt="logo"></img>
           <p>This Website is optimized for laptop/tablet screen.</p>
         </div>
       )}
