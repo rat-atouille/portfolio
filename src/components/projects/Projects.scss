@@ -10,6 +10,7 @@
   width: 100vw;
   height: 100vh;
   background-color: #F3F4EF;
+  transition: all ease-in-out;
 }
 
 .section {
@@ -17,7 +18,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 15px;
   background-color: #F3F4EF;
   border: 1px solid #001EFF;
   cursor: pointer;
@@ -30,20 +31,36 @@
 
   &.active {
     flex-basis: 60%; // Expand the selected section to more than half
-    background-color: #eee; // Change background color for active section
+    background-color: #e1a0a0; // Change background color for active section
 
     .section-content {
+      background-color: rgb(218, 226, 218);
       display: block;
       opacity: 1; // Smooth content fade-in
       transition: opacity 0.5s ease;
+
+      a {
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        font-size: 1rem;
+        transition: all 0.2s;
+        font-weight: 600;
+        &:hover {
+          font-weight: 700;
+        }
+      }
+    }
+    .section-title {
+      transition: all 1s ease;
+      writing-mode: horizontal-tb;
     }
   }
 
   .section-title {
     font-size: 2em;
-    writing-mode: vertical-lr;
-    
-    text-orientation: mixed;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
   }
 
   .section-content {
@@ -55,6 +72,6 @@
 }
 
 .section:not(.active) {
-  flex-basis: calc(40% / 3); // The remaining three sections share the remaining space equally
+  flex-basis: calc(30% / 3); // The remaining three sections share the remaining space equally
   transition: flex-basis 0.5s ease; // Smooth size transition for closing
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Projects.scss';
+import { Link } from 'react-router-dom';
 
 const App = () => {
   const [activeSection, setActiveSection] = useState(null);
@@ -7,8 +8,7 @@ const App = () => {
   const sections = [
     { id: 'wordchain', title: "Word Chain", content: 'Content for A' },
     { id: 'movie', title:"Movie Tracker", content: 'Content for B' },
-    { id: 'portfolio', title: "Portfolio",content: 'Content for C' },
-    { id: 'gpa', title: "GPA CALCULATOR", content: 'Content for D' }
+    { id: 'gpa', title: "GPA CALCULATOR", content: 'Content for C' }
   ];
 
   const handleSectionClick = (id) => {
@@ -27,6 +27,7 @@ const App = () => {
           {activeSection === section.id && (
             <div className="section-content">
               {section.content}
+              <div><Link to={`${section.id}`}>Details {'\u2192'}</Link></div>
             </div>
           )}
         </div>
